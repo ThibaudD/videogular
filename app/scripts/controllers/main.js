@@ -114,6 +114,7 @@ angular.module('myApp').controller('MainCtrl',
             sources: this.media[0].sources,
             tracks: this.media[0].tracks,
             loop: false,
+            muted: false,
             preload: "auto",
             controls: false,
             theme: {
@@ -150,6 +151,7 @@ angular.module('myApp').controller('MainCtrl',
             this.config.sources = this.media[1].sources;
             this.config.tracks = undefined;
             this.config.loop = false;
+            this.config.muted = false;
             this.config.preload = true;
         };
 
@@ -175,6 +177,7 @@ angular.module('myApp').controller('MainCtrl',
             ];
             this.config.tracks = undefined;
             this.config.loop = false;
+            this.config.muted = false;
             this.config.preload = true;
         };
 

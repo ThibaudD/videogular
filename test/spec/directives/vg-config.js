@@ -23,6 +23,7 @@ describe('Directive: Videogular Config', function () {
       {
         "controls": false,
         "loop": false,
+        "muted": false,
         "autoplay": false,
         "preload": "auto",
         "theme": "styles/themes/default/videogular.css",
@@ -63,7 +64,7 @@ describe('Directive: Videogular Config', function () {
 
 		element = angular.element(
       '<videogular vg-config="assets/data/config.json">' +
-        '<vg-media vg-src vg-tracks vg-loop vg-preload vg-native-controls></vg-media>' +
+        '<vg-media vg-src vg-tracks vg-loop vg-muted vg-preload vg-native-controls></vg-media>' +
 
         '<vg-controls>' +
           '<vg-play-pause-button></vg-play-pause-button>' +

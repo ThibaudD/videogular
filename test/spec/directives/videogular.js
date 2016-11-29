@@ -20,6 +20,7 @@ describe('Directive: Videogular', function () {
             preload: "none",
             controls: true,
             loop: true,
+            muted: true,
             sources: [
                 {src: $sce.trustAsResourceUrl("assets/videos/videogular.mp4"), type: "video/mp4"},
                 {src: $sce.trustAsResourceUrl("assets/videos/videogular.webm"), type: "video/webm"},
@@ -47,7 +48,7 @@ describe('Directive: Videogular', function () {
 
         element = angular.element(
             '<videogular vg-theme="config.theme.url">' +
-            '<vg-media vg-src="config.sources" vg-tracks="config.tracks" vg-native-controls="config.controls" vg-preload="config.preload" vg-loop="config.loop"></vg-media>' +
+            '<vg-media vg-src="config.sources" vg-tracks="config.tracks" vg-native-controls="config.controls" vg-preload="config.preload" vg-loop="config.loop" vg-muted="config.muted"></vg-media>' +
             '</videogular>'
         );
 
@@ -73,6 +74,7 @@ describe('Directive: Videogular', function () {
             expect(video.attr("controls")).not.toBe(null);
             expect(video.attr("preload")).toBe("none");
             expect(video.attr("loop")).toBe("loop");
+            expect(video.attr("muted")).toBe("true");
         });
 
         it("should have been created two track elements", function () {

@@ -37,6 +37,7 @@
  {
    "controls": false,
    "loop": false,
+   "muted": false,
    "autoplay": false,
    "startTime": -1,
    "virtualClipDuration": -1,
